@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "bodymassindex-calc",
+    "bmi-calc": "bodymassindex-calc"
+  }
+}
