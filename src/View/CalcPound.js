@@ -22,9 +22,14 @@ export default class CalcPounds extends React.Component {
   componentDidMount(){
     window.scrollTo(0, window.innerHeight ,'smooth')
   }
+  handleScroll=() => {
+    window.scrollTo(0, 0 ,'smooth')
+  }
+
 
   render() {
     const { height, weight }= this.state;
+    const { handleVerify, handleScroll} = this;
   return(
     <div className="App">
       <header className="App-header">
@@ -34,7 +39,8 @@ export default class CalcPounds extends React.Component {
           <input type='text' name="height" value={height} onChange={this.handleChange}/>
           <label> Your Weight (Pounds) </label>
           <input type='text' name="weight" value={weight} onChange={this.handleChange}/><br />
-          <button type="button" onClick={this.handleVerify}>Verify</button>
+          <button type="button" onClick={handleVerify}>Verify</button>
+          <button type='button' onClick={handleScroll}> Scroll to Top </button>
           </form>
       </header>
     </div>
